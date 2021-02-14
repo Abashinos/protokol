@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "protokol"
+version = "1.1.2"
+description = ""
+authors = ["Sergey Zhegunya <harmonicsseven@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers=[
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3.5',
+    'Operating System :: MacOS',
+    'Operating System :: POSIX :: Linux',
+]
+exclude = ["tests/*"]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+asyncio-nats-client = "\b"
+
+[tool.poetry.dev-dependencies]
+bump2version = "\b"
+
+[tool.poetry.extras]
+test = [
+    "asynctest",
+    "openapi-spec-validator",
+    "pytest",
+    "pytest-aiohttp",
+    "pytest-cov",
+]
+
+[tool.poetry.urls]
+homepage = "https://github.com/harm7/protokol"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
